@@ -1,7 +1,13 @@
 import java.util.ArrayList;
 
+//Black Spade Suit (Spade) U+2660
+//Black Heart Suit (Hearts) U+2665
+//Black Diamond Suit (Diamonds) U+2666
+// Black Club Suit (Club) "U+2663"
+
+
 class CardGame {
-    String[] suits = {"\u2660", "\u2665", "\u2665", "\u2666"};
+    String[] suits = {"\u2660", "\u2665", "\u2665", "\u2663"};
     String[] symbols = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
     int[] values = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     private ArrayList<Card> deckOfCards = new ArrayList<Card>();
@@ -15,3 +21,5 @@ class CardGame {
 
 }
 
+
+}
