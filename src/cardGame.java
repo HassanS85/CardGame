@@ -34,7 +34,11 @@ public class cardGame {
             this.value = value;
         }
 
+        public String toString() {
 
+            String cardName = this.symbol + " of " + this.suit;
+            return cardName;
+        }
 
 
 

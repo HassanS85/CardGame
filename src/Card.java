@@ -19,6 +19,24 @@ class CardGame {
         this.TempDeckOfCards = TempDeckOfCards;
     }
 
+    public void generateDeck(){
+
+        for (String suit: suits){
+            for (int j = 0; j <symbols.length;j++){
+                Card myCard  = new Card(suit, symbols[j], values[j]);
+                deckOfCards.add(myCard);
+                TempDeckOfCards.add(myCard);
+            }
+
+
+        }
+        System.out.println(TempDeckOfCards);
+
+
+
+
+
+
 }
 
 
