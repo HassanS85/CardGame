@@ -1,6 +1,6 @@
 public class cardGame {
 
-    class Card {
+    static class Card {
         private String suit;
         private String symbol;
         private int value;
