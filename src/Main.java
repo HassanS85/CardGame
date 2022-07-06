@@ -8,11 +8,12 @@ public class Main {
         System.out.println(card.toString());
 
         CardGame deck = new CardGame();
+        CardGame shuffleddeck = new CardGame();
 
         deck.generateDeck();
 //    deck.getDeck();
         deck.getFirstCard();
-
+        shuffleddeck.shuffleDeck();
     }
 }
 
