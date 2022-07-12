@@ -5,7 +5,8 @@
 //Black Diamond Suit  U+2666
 // Black Club Suit  "U+2663"
 
-class Card {
+//using Implements -
+class Card implements Comparable <Card>{
     private String suit;
     private String symbol;
     private int value;
@@ -45,4 +46,14 @@ class Card {
         String cardName = this.symbol + " of " + this.suit;
         return cardName;
     }
+
+    //
+    @Override
+    public int compareTo(Card card) {
+        return value - card.getValue();
+    }
+
+
+
+
 }

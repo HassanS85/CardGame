@@ -14,8 +14,8 @@ class cardGame {
     String[] suits = {"\u2660", "\u2665", "\u2666", "\u2663"};
     String[] symbols = {"2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"};
     int[] values ={2,3,4,5,6,7,8,9,10,11,12,13,14};
-    private static ArrayList<Card> deckOfCards = new ArrayList<Card>();
-    private ArrayList<Card> TempDeckOfCards = new ArrayList<Card>();
+    private static List<Card> deckOfCards = new ArrayList<>();
+    private List<Card> TempDeckOfCards = new ArrayList<>();
 
 
     public cardGame() {
@@ -63,14 +63,19 @@ class cardGame {
 
     public void sortDeckIntoSuits(){
 
-        deckOfCards  = (ArrayList<Card>) deckOfCards.stream().sorted().sorted(Comparator.comparing(Card::getSuit)).collect(Collectors.toList());
+        deckOfCards  =  deckOfCards.stream()
+                .sorted()
+                .sorted(Comparator.comparing(Card::getSuit))
+                .collect(Collectors.toList());
         System.out.println(deckOfCards);
 
     }
 
     public void sortDeckInNumberOrder(){
 
-        deckOfCards = (ArrayList<Card>) deckOfCards.stream().sorted().collect(Collectors.toList());
+        deckOfCards =  deckOfCards.stream()
+                .sorted()
+                .collect(Collectors.toList());
 
         System.out.println(deckOfCards);
 
