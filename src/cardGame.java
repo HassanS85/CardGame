@@ -6,14 +6,20 @@
 // Black Club Suit  "U+2663"
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+//setup a new class here called cardGame
+//create strings and ints of the symbols, suits and values of the cards
 
 class cardGame {
     String[] suits = {"\u2660", "\u2665", "\u2666", "\u2663"};
     String[] symbols = {"2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"};
     int[] values ={2,3,4,5,6,7,8,9,10,11,12,13,14};
+
+
     private static List<Card> deckOfCards = new ArrayList<>();
     private List<Card> TempDeckOfCards = new ArrayList<>();
 
@@ -47,22 +53,29 @@ class cardGame {
     }
 
 
-    public static void shuffleDeck(){
-        List shuffledDeck = new ArrayList<>();
+//    public static void shuffleDeck(){
+//        List shuffledDeck = new ArrayList<>();
+//
+//        while (deckOfCards.size() != 0) {
+//            int randomCard = (int) (Math.random() * deckOfCards.size());
+//            shuffledDeck.add(deckOfCards.get(randomCard));
+//            deckOfCards.remove(randomCard);
+//
+//        }
+//
+//        deckOfCards = (ArrayList<Card>) shuffledDeck;
+//
+//
+//    }
 
-        while (deckOfCards.size() != 0) {
-            int randomCard = (int) (Math.random() * deckOfCards.size());
-            shuffledDeck.add(deckOfCards.get(randomCard));
-            deckOfCards.remove(randomCard);
+    public void shuffleDeck(){
+        Collections.shuffle(deckOfCards);
+        System.out.println(deckOfCards);}
 
-        }
 
-        deckOfCards = (ArrayList<Card>) shuffledDeck;
-        System.out.println(shuffledDeck);
-    }
 
     public void sortDeckIntoSuits(){
-
+//sorted into number order initially, then sorts by suit.
         deckOfCards  =  deckOfCards.stream()
                 .sorted()
                 .sorted(Comparator.comparing(Card::getSuit))
@@ -70,7 +83,7 @@ class cardGame {
         System.out.println(deckOfCards);
 
     }
-
+//stream to get deck of cards, sort, then add to a list
     public void sortDeckInNumberOrder(){
 
         deckOfCards =  deckOfCards.stream()

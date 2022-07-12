@@ -5,7 +5,8 @@
 //Black Diamond Suit  U+2666
 // Black Club Suit  "U+2663"
 
-//using Implements -
+//using Implements - this is how to compare between array.
+//
 class Card implements Comparable <Card>{
     private String suit;
     private String symbol;
@@ -47,7 +48,9 @@ class Card implements Comparable <Card>{
         return cardName;
     }
 
-    //
+    //when .sorted is called, it will use the interface.
+    //this part will need to be over ridden so that we can sort this in the way we need it to be sorted.
+
     @Override
     public int compareTo(Card card) {
         return value - card.getValue();

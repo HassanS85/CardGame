@@ -16,9 +16,10 @@ public class Main {
         deck.generateDeck();
         deck.getDeck();
         deck.getFirstCard();
-        deck.shuffleDeck();
+        //deck.shuffleDeck();
         deck.sortDeckInNumberOrder();
         deck.sortDeckIntoSuits();
+        deck.shuffleDeck();
 
     }
 }
