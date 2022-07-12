@@ -53,20 +53,6 @@ class cardGame {
     }
 
 
-//    public static void shuffleDeck(){
-//        List shuffledDeck = new ArrayList<>();
-//
-//        while (deckOfCards.size() != 0) {
-//            int randomCard = (int) (Math.random() * deckOfCards.size());
-//            shuffledDeck.add(deckOfCards.get(randomCard));
-//            deckOfCards.remove(randomCard);
-//
-//        }
-//
-//        deckOfCards = (ArrayList<Card>) shuffledDeck;
-//
-//
-//    }
 
     public void shuffleDeck(){
         Collections.shuffle(deckOfCards);
