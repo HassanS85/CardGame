@@ -26,7 +26,7 @@ class cardGame {
 
     public cardGame() {
         this.deckOfCards = deckOfCards;
-        this.TempDeckOfCards = TempDeckOfCards;
+        //this.TempDeckOfCards = TempDeckOfCards;
     }
 
     public void generateDeck(){
@@ -35,11 +35,11 @@ class cardGame {
             for (int j = 0; j <symbols.length;j++){
                 Card myCard  = new Card(suit, symbols[j], values[j]);
                 deckOfCards.add(myCard);
-                TempDeckOfCards.add(myCard);
+                //TempDeckOfCards.add(myCard);
             }
 
         }
-        System.out.println(TempDeckOfCards);
+        //System.out.println(TempDeckOfCards);
 
     }
 
