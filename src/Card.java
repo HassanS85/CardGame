@@ -1,7 +1,9 @@
+// Unicodes:
 
-
-
-import java.util.ArrayList;
+//Black Spade Suit  U+2660
+//Black Heart Suit  U+2665
+//Black Diamond Suit  U+2666
+// Black Club Suit  "U+2663"
 
 class Card {
     private String suit;

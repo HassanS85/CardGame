@@ -1,5 +1,4 @@
 
-
 // Unicode:
 //Black Spade Suit  U+2660
 //Black Heart Suit  U+2665
@@ -7,17 +6,19 @@
 // Black Club Suit  "U+2663"
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
-class CardGame {
-    String[] suits = {"\u2660", "\u2665", "\u2666", "\u2666"};
-    String[] symbols = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+class cardGame {
+    String[] suits = {"\u2660", "\u2665", "\u2666", "\u2663"};
+    String[] symbols = {"2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"};
     int[] values ={2,3,4,5,6,7,8,9,10,11,12,13,14};
     private static ArrayList<Card> deckOfCards = new ArrayList<Card>();
     private ArrayList<Card> TempDeckOfCards = new ArrayList<Card>();
 
 
-    public CardGame() {
+    public cardGame() {
         this.deckOfCards = deckOfCards;
         this.TempDeckOfCards = TempDeckOfCards;
     }
@@ -51,15 +52,35 @@ class CardGame {
 
         while (deckOfCards.size() != 0) {
             int randomCard = (int) (Math.random() * deckOfCards.size());
-            System.out.println(randomCard);
             shuffledDeck.add(deckOfCards.get(randomCard));
             deckOfCards.remove(randomCard);
 
         }
 
         deckOfCards = (ArrayList<Card>) shuffledDeck;
+        System.out.println(shuffledDeck);
+    }
+
+    public void sortDeckIntoSuits(){
+
+        deckOfCards  = (ArrayList<Card>) deckOfCards.stream().sorted().sorted(Comparator.comparing(Card::getSuit)).collect(Collectors.toList());
+        System.out.println(deckOfCards);
+
+    }
+
+    public void sortDeckInNumberOrder(){
+
+        deckOfCards = (ArrayList<Card>) deckOfCards.stream().sorted().collect(Collectors.toList());
+
+        System.out.println(deckOfCards);
+
+
     }
 
 
-
 }
+
+
+
+
+
